@@ -15,6 +15,14 @@ To convert the C program [Count from 1 to n](Day1/Code/C_program_count_to_n.png)
 
 Following commands were used to compile the C program
 
+To use the risc-v gcc compiler: 
+
+`riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o <object filename> <C filename>`
+
+It was observed that if we used -Ofast option instead of -O1 option the optimization increased and the generated instructions were less. For the same C program the number of instructions for -O1 option was 15 and -Ofast option was 12.
+
+
+
 
 
 
