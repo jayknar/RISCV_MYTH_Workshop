@@ -11,7 +11,7 @@ RISC-V is an open instruction set architecture (ISA) which can be used to implem
 
 ISA (Instruction Set Architecture) defines the types of instructions, the instruction format and maximum length of instructions supported by the implemented processor.
 
-To convert the C program [Count from 1 to n](/Day1/Code/C program count to n.png) to machine code a RISC-V GCC compiler toolchain was used which contains a compiler and a disassembler. The machine code was then run on picorv32 cpu core implementation to validate the results.
+To convert the C program [Count from 1 to n](Day1/Code/C_program_count_to_n.png) to machine code a RISC-V GCC compiler toolchain was used which contains a compiler and a disassembler. The machine code was then run on picorv32 cpu core implementation to validate the results.
 
 Following commands were used to compile the C program
 
