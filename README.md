@@ -11,15 +11,36 @@ RISC-V is an open instruction set architecture (ISA) which can be used to implem
 
 ISA (Instruction Set Architecture) defines the types of instructions, the instruction format and maximum length of instructions supported by the implemented processor.
 
-To convert the C program [Count from 1 to n](Day1/Code/C_program_count_to_n.png) to machine code a RISC-V GCC compiler toolchain was used which contains a compiler and a disassembler. The machine code was then run on picorv32 cpu core implementation to validate the results.
+To convert the C program [Count from 1 to n](Day1/Code/C_program_count_to_n.png) to machine code a RISC-V GCC compiler toolchain was used which contains a compiler and assembler. The object code is run on RISC-V function simulator called Spike.
 
-Following commands were used to compile the C program
-
-To use the risc-v gcc compiler: 
+To use the risc-v gcc compiler use below command: 
 
 `riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o <object filename> <C filename>`
 
 It was observed that if we used -Ofast option instead of -O1 option the optimization increased and the generated instructions were less. For the same C program the number of instructions for -O1 option was 15 and -Ofast option was 12.
+
+To visualize the assembly code use the below command:
+
+`riscv64-unknown-elf-objdump -d <object filename>`
+
+The assembly code is available [here](Day1/assembly_code_with_ofast_option)
+
+The object code is then run using Spike simulator and we get the [result](using_spike_to_run_program.png) of the C program
+
+The command to run the spike simulator is:
+
+`spike pk <object filename>`
+
+## Introduction to ABI and basic verification using iverilog
+
+
+
+
+
+
+
+
+
 
 
 
