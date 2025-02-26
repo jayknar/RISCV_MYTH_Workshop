@@ -31,6 +31,14 @@ The command to run the spike simulator is:
 
 `spike pk <object filename>`
 
+Spike can also be used as a debugger to step through the instructions and find the register values. [snapshot](Day1/run_till_100b0_pc.png)
+
+Debug command:
+
+`spike -d pk <object Filename>` 
+
+To go to PC of our choice - `until pc 0 <pc of your choice>`
+
 ## Introduction to ABI and basic verification using iverilog
 
 
