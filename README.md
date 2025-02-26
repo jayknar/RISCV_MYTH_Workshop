@@ -9,6 +9,10 @@ This repository contains codes and information that were designed as part of [RI
 ## Introduction to RISC-V ISA and GNU Compiler chain
 RISC-V is an open instruction set architecture (ISA) which can be used to implement a RISC-V for free without paying royalties. It also allows for customizations thus enabling developers to create processors for specific use cases.
 
+ISA (Instruction Set Architecture) defines the types of instructions, the instruction format and maximum length of instructions supported by the implemented processor.
+
+
+
 
 
 
