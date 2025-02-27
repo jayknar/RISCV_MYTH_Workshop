@@ -80,6 +80,30 @@ The following designs were implemented using TL-Verilog concepts:
 - [Calculator with Valid](Day3/calculator_with_valid.v)'
 - [2 Cycle Pipeline](Day3/2_cycle_pipeline.v)
 
+## Basic RISC-V CPU Architecture
+
+A basic RISC-V CPU was implemented in TL-Verliog. The CPU was made of Program counter, Instruction memory, Decode logic, Register file to read and write data, Data memory. PC(program counter) was implemented such that if previous instruction was reset instruction then PC was reset to 0 otherwise PC was incremented by 1 instruction(4 Bytes).
+
+Instruction memory was already implemented and it was added and integrated to the existing design.
+
+A decode logic was designed to decode I,R,S,B,J,U instruction types. In RV32I Base Instruction Set, branch instructions and add instructions were implemented as part of basic RISC-V CPU. The register file was implemented and integrated to the remaining logic. 
+
+A basic ALU that computes ADD and ADDI instructions results was implemented. Further to handle branch instructions, PC logic was modified to update the PC value to the new branch target address if previous instruction was a branch instruction.
+
+Register file read and write logic was modified such that read and write logic is implemented only when there is a valid read/write instruction (using the concept of validity).
+
+To test the RISC-V CPU, an assembly program to calculate the sum of numbers from 1 to 9 was executed on the CPU.
+
+![basic_riscv_cpu](https://github.com/user-attachments/assets/259d2f8c-d24e-427b-b233-715ad4b8019b)
+
+## Pipelined RISC-V CPU micro-architecture
+
+
+
+
+
+
+
 
 
 
