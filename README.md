@@ -44,6 +44,22 @@ Debug command:
 To go to PC of our choice - `until pc 0 <pc of your choice>`
 
 ## Introduction to ABI and basic verification using iverilog
+Application Binary Interface is a set of libraries available in high-level languages like C/Java that allows the application programmers to access some of the registers available in the hardware using system calls. Most of the registers are accessible to OS only through the System ISA. 
+
+There are 32 registers available RV32 and RV64. The width of each register is defined using XLEN. XLEN is 32 bits for RV32 and 64 bit for RV64. 
+There are 2 different ways to load data into the registers:
+
+- Load the 64 bit registers directly
+- Load into memory and then load to register
+
+Since only 4 bytes can be stored in one memory location in RISC-V, multiple memory access will be required to access the instructions. Also RISC-V belongs to the little-endian memory adddressing system where the lower byte is stored in first memory location, next byte in second memory location and so on.
+
+Instruction size in RV32 and RV64 is fixed at 32 bits.There are many types of instructions that are supported by RISC-V. RV64I are the base integer instructions that supports operations on integers.
+
+The C program was modified to call a load function which was implemented using assembly instructions. The load function used register manipulations, branch and jump instructions to get the sum of numbers from 1 to N. The C program only passed the number N and the result of the summation was returned by the assembly code to the C program.
+
+The modified C program is available [here]
+  
 
 
 
