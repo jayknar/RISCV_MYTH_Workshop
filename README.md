@@ -74,7 +74,13 @@ TL-Verilog introduces another concept called Validity. Signals are assigned to a
 Using `?$valid` we indent the part of the code that needs to be executed only when the condition is satisfied.
 
 The following designs were implemented using TL-Verilog concepts:
-[Combinational Calculator](Day3/
+
+- [Combinational Calculator](Day3/combinational_calculator.v)
+- [Sequential Calculator](Day3/sequential_calculator.v)
+- [Calculator with Valid](Day3/calculator_with_valid.v)'
+- [2 Cycle Pipeline](Day3/2_cycle_pipeline.v)
+
+
 
 
 
