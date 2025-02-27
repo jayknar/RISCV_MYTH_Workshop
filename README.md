@@ -65,7 +65,21 @@ The C program was converted to hex and was executed in RISC-V picorv-32 verilog 
 ## Digital logic design using TL-Verliog and Makerchip
 Makerchip IDE allows easier circuit design using the emerging [TL-Verilog](https://www.tl-x.org/) (Transaction Level Verilog Standard). TL-Verilog introduces new constructs that simplify designing of pipelined logic. The [Makerchip](https://www.makerchip.com/) IDE provides a platform for designing circuits using TL-Verilog, visualize the generated logic and get the waveforms for testing the design functionality.
 
-  
+TL-Verilog provides an operator `>>1$in` which provides the value of 'in' signal 1 cycle before. Similarly we can get signals 2 or 3 cycles before current clock using `>>2` and `>>3`.
+
+Timing abstract concept of TL-Verilog allows to convert the design to a pipelined design easily using `|pipe` scope with each pipeline stage defined as `@n` 
+where n is the pipeline stage number.
+
+TL-Verilog introduces another concept called Validity. Signals are assigned to a variable `$valid` specifiying the condition when the design needs to be executed.
+Using `?$valid` we indent the part of the code that needs to be executed only when the condition is satisfied.
+
+The following designs were implemented using TL-Verilog concepts:
+[Combinational Calculator](Day3/
+
+
+
+
+
 
 
 
