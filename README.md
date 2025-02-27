@@ -23,7 +23,11 @@ To visualize the assembly code use the below command:
 
 `riscv64-unknown-elf-objdump -d <object filename>`
 
+This command will be show the PC(Program counter) values, the address of the instructions in memory, the assembly language instructions used and the registers that are accessed by these instructions.
+Since a byte of data in stored at a particular memory location, the addresses will be incremented by 32'd4 after each instruction.
+
 The assembly code is available [here](Day1/assembly_code_with_ofast_option)
+
 
 The object code is then run using Spike simulator and we get the [result](using_spike_to_run_program.png) of the C program
 
