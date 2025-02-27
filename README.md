@@ -98,7 +98,30 @@ To test the RISC-V CPU, an assembly program to calculate the sum of numbers from
 
 ## Pipelined RISC-V CPU micro-architecture
 
+Pipeline is used to keep every part of processor busy by dividing instructions into series of sequential steps/stages. The stages are Instruction Fetch, Instruction Decode, Execute, Memory access,Register write back. 
 
+This allows instructions to be passed continously to CPU instead of waiting for each instruction to complete. Thus the throughput of the CPU increases and more number of instructions are executed in lesser time.
+
+But pipelining causes 2 hazards - Control flow hazard and Read after write hazard.
+
+Read after write hazard occurs when a read instruction executes immediately after write instruction. This causes incorrect register value to be read as register writeback takes an extra cycle to complete.
+
+There are 2 solutions for this issue:
+
+- 3-cycle $valid
+  Insert a 3 cycle delay in execution of instructions.
+- Register File Bypass
+  If the previous instruction was a register write and current read instruction register and previous write register are same then MUXes are used to give to ALU results directly to read instruction.
+
+Additional logic was added to implement the complete ALU and jump and branch instructions along with data memory. The test program was modified to include load and store instructions to check the functionality of the design.
+
+![image](https://github.com/user-attachments/assets/78c2b7d0-50d1-4743-ad4e-40aa65d29120)
+
+# Acknowledgments
+
+[Kunal Ghosh](https://github.com/kunalg123) ,Co-founder, VSD Corp. Pvt. Ltd.
+
+[Steve Hoover](https://github.com/stevehoover) ,Founder, Redwood EDA
 
 
 
