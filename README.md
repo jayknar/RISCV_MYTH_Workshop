@@ -60,7 +60,11 @@ The C program was modified to call a load function which was implemented using a
 
 The modified C program is available [here](Day2/1t09_custom_c.png)
 
-The C program was converted to hex and was executed in RISC-V picorv-32 verilog implementation using iverilog open source compiler. The results of the verification is shown [here]
+The C program was converted to hex and was executed in RISC-V picorv-32 verilog implementation using iverilog open source compiler. The results of the verification is shown [here](Day2/C_program_verification.png)
+
+## Digital logic design using TL-Verliog and Makerchip
+
+
   
 
 
