@@ -58,7 +58,9 @@ Instruction size in RV32 and RV64 is fixed at 32 bits.There are many types of in
 
 The C program was modified to call a load function which was implemented using assembly instructions. The load function used register manipulations, branch and jump instructions to get the sum of numbers from 1 to N. The C program only passed the number N and the result of the summation was returned by the assembly code to the C program.
 
-The modified C program is available [here]
+The modified C program is available [here](Day2/1t09_custom_c.png)
+
+The C program was converted to hex and was executed in RISC-V picorv-32 verilog implementation using iverilog open source compiler. The results of the verification is shown [here]
   
 
 
