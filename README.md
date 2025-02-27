@@ -63,7 +63,7 @@ The modified C program is available [here](Day2/1t09_custom_c.png)
 The C program was converted to hex and was executed in RISC-V picorv-32 verilog implementation using iverilog open source compiler. The results of the verification is shown [here](Day2/C_program_verification.png)
 
 ## Digital logic design using TL-Verliog and Makerchip
-
+Makerchip IDE allows easier circuit design using the emerging [TL-Verilog](https://www.tl-x.org/) (Transaction Level Verilog Standard). TL-Verilog introduces new constructs that simplify designing of pipelined logic. The [Makerchip](https://www.makerchip.com/) IDE provides a platform for designing circuits using TL-Verilog, visualize the generated logic and get the waveforms for testing the design functionality.
 
   
 
